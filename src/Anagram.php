@@ -11,20 +11,18 @@
             sort($main_word_explode);
             $main_word_alph = implode($main_word_explode);
 
-            foreach ($anagram_arr as $value)
+            foreach ($anagram_arr as $key => $value)
             {
                 $new_value = str_split($value);
                 sort($new_value);
                 $value = implode("", $new_value);
-            }
-
-            foreach ($anagram_arr as $key => $value)
-            {
                 if ($value == $main_word_alph) {
                     $result_arr[$key] = true;
                 } else {
                     $result_arr[$key] = false;
                 }
+                var_dump($main_word_alph);
+                var_dump($value);
             }
             return $result_arr;
         }

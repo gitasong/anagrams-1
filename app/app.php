@@ -11,5 +11,9 @@
         return $app['twig']->render('anagrams.html.twig');
     });
 
+    $app->get('/result', function() use ($app){
+
+        return $app['twig']->render('anagram_results.html.twig')
+    });
     return $app;
 ?>

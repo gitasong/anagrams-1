@@ -34,5 +34,21 @@
             // Assert
             $this->assertEquals([$input_0 => true, $input_1 => false, $input_2 => false], $result);
         }
+
+        function testCheckAnagramMultiInputs()
+        {
+            // Arrange
+            $test_anagram = new Anagram;
+            $main_word = "DOG";
+            $input_0 = "GOD";
+            $input_1 = "BED";
+            $input_2 = "";
+
+            // Act
+            $result = $test_anagram->checkAnagram($main_word, $input_0, $input_1, $input_2);
+
+            // Assert
+            $this->assertEquals([$input_0 => true, $input_1 => false, $input_2 => false], $result);
+        }
     }
 ?>
